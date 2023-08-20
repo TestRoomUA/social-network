@@ -1,0 +1,170 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  bottom: border-box;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  scroll-behavior: smooth;
+}
+
+.container{
+  margin: 0 auto;
+  max-width: 1100px;
+  width: 100%;
+}
+
+a{
+  text-decoration: none;
+  color: rgba(28,20,13,0.9);
+}
+
+body{
+  position: relative;
+  background: url(../img/lamp4.png) repeat fixed center center #f2e9e1;
+}
+
+
+
+header, footer{
+  background-color: #1c140d;
+  color: #f2e9e1;
+}
+
+.page{
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header-menu{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.menu-nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-account{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-link{
+  text-align: center;
+  list-style: none;
+  margin: 0 10px;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 2px;
+  position: relative;
+  transition: 0.3s;
+  transition-property: background, letter-spacing, margin;
+}
+
+.nav-link:hover{
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: 0.2s;
+}
+
+.nav-link::after{
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 5px;
+  width: 100%;
+  background-color: rgba(203,232,107,1);
+  display: none;
+}
+
+.menu-account .nav-link::after{
+  background-color: rgba(107,203,232,1);
+}
+
+.nav-link:hover::after{
+  display: block;
+}
+
+.nav-link a{
+  color: #f2e9e1;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  padding: 30px 20px;
+}
+
+.account{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.account-image{
+  height: 60px;
+  width: 60px;
+}
+
+.account-button{
+  width: 25px;
+  height: 25px;
+  position: relative;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.account-button:hover{
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: 0.2s;
+  transition-property: background-color;
+}
+
+.account-block{
+  height: 150px;
+  width: 100%;
+  background-color: blue;
+  float: bottom;
+}
+
+footer{
+  padding: 20px;
+  margin-top: auto;
+  color: #f2e9e1;
+}
+
+
+/*ICONS*/
+.fas{
+  font-size: 20px;
+  color: #f2e9e1;
+  background-color: transparent;
+}
+
+@media screen and (max-width: 1068px) {
+  .header-menu,
+  .menu-nav,
+  .menu-account{
+    display: block;
+    text-align: center;
+  }
+
+  .nav-link a{
+    padding: 20px;
+  }
+
+  .article{
+    height: 410px;
+  }
+  .article .image{
+    max-height: 300px;
+  }
+}

@@ -1,0 +1,35 @@
+::-webkit-scrollbar{
+  width: 24px;
+}
+
+::-webkit-scrollbar-track{
+  background: rgba(178, 222, 129, 1);
+}
+
+::-webkit-scrollbar-thumb{
+  border-radius: 100vw;
+  border: 5px solid rgba(178, 222, 129, 1);
+  background: rgba(103, 161, 37, 0.7);
+  box-shadow: inset -5px -5px 10px 1px rgba(0, 0, 0, 0.2);
+
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background: rgba(103, 161, 37, 1);
+}
+/*
+@supports (scrollbar-color: red blue) {
+  *{
+    scrollbar-color: rgba(178,222,129,1) rgba(103,161,37,1);
+  }
+}
+*/
+
+/*
+box-shadow:
+-15px -15px 2px -5px rgba(123,51,90,.5),
+-15px 15px 2px -5px rgba(60,74,123,.5),
+15px -15px 2px -5px rgba(255,0,0,.5),
+15px 15px 2px -5px rgba(60,123,68,.5);
+*/

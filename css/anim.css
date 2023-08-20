@@ -1,0 +1,32 @@
+._anim-items{
+  transform: translate(0px, 70%);
+  opacity: 0;
+  transition: 0.5s;
+  transition-property: transform, opacity;
+  /*overflow: hidden;*/
+
+  transition-delay: calc( 0.1s + (0.15s * var(--i)));
+}
+
+._anim-items._active{
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+
+
+/*Adaptive*/
+@media screen  and (max-width: 1372px){
+  ._anim-items:nth-child(2n+1){
+    transition-delay: 0s;
+  }
+
+  ._anim-items:nth-child(2n){
+    transition-delay: 0.2s;
+  }
+}
+
+@media screen  and (max-width: 992px){
+  ._anim-items:nth-child(1n){
+    transition-delay: 0s;
+  }
+}

@@ -1,0 +1,155 @@
+
+/*Articles*/
+main.articles{
+
+}
+
+.heading{
+  padding: 125px 0 90px;
+  margin-bottom: 40px;
+  display: block;
+  font-size: 19.20px;
+  font-weight: 700;
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.article{
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #f0f0ff;
+  box-shadow: 0px 0px 20px 5px silver,
+              2px 5px 10px 7px silver,
+        inset -10px -10px 10px 0px rgba(200, 200, 255, 0.2);
+}
+
+.article:hover{
+
+}
+
+.card{
+  transition: 0.5s;
+}
+
+.card:hover{
+  transform: scale(1.05);
+}
+
+.article .image{
+  min-height: 200px;
+  max-height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+}
+
+.card{
+  overflow: hidden;
+}
+.card-body{
+  z-index: 2;
+  background-color: inherit;
+}
+
+.article .image img, .card .card-img-top{
+  width: 100%;
+  transition: 0.5s;
+}
+
+.article:hover .image img, .card:hover .card-img-top{
+  transform: scale(1.1);
+}
+
+
+.article .title{
+  min-height: 150px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.article .title>a{
+  font-size: 23.04px;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 10px;
+  transition: 0.25s;
+  transition-property: color;
+  margin-bottom: 24px;
+}
+
+.article:hover .title>a{
+  transition: 0.25s;
+  color: #4e98ce;
+}
+
+
+.article .group>a{
+  font-size: 19.20px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  opacity: 0.7;
+  transition: 0.25s;
+  transition-property: opacity, color;
+}
+
+.article .group>a:hover{
+  opacity: 1;
+}
+
+
+/*Adaptive*/
+@media screen  and (max-width: 1372px){
+  .heading{
+    padding: 100px 0 45px;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen  and (max-width: 1092px){
+  .heading{
+    padding: 50px 0 45px;
+  }
+}
+
+@media screen and (max-width: 868px) {
+  .heading{
+    padding: 25px 0;
+  }
+}
+
+
+/*Colors*/
+
+/*
+#1c140d rgba(28,20,13,1)
+#f2e9e1 rgba(242,233,225,1)
+#cbe86b rgba(203,232,107,1)
+#e5eff5
+
+#245c00 rgba(36,92,0,1)
+#67a125 rgba(103,161,37,1)
+#b2de81 rgba(178,222,129,1)
+#fcfefe rgba(252,254,254,1)
+*/
+
+/*Fonts*/
+
+/*Inter*/
+/*
+@font-face{
+  font-family: "Inter";
+  src: url("../fonts/Inter/Inter-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+*/

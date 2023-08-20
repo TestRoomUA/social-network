@@ -1,0 +1,97 @@
+
+////////////////
+Old Header**
+
+<header id="header">
+      <div class="container">
+        <div class="header-menu">
+          <ul class="menu-nav">
+            <li class="nav-link"><a href="/"><i class="fas fa-home"></i><span>Главная</span></a></li>
+            <li class="nav-link"><a href="#_about"><i class="fas fa-info"></i></span>О сайте</span></a></li>
+            <li class="nav-link"><a href="#_articles"><i class="fas fa-newspaper"></i></span>Статьи</span></a></li>
+            <li class="nav-link"><a href="#_contacts"><i class="fas fa-address-book"></i></span>Контакты</span></a></li>
+          </ul>
+
+          <ul class="menu-account">
+            <?php if( isset($_SESSION['logged_user']) ) : ?>
+              <li class="nav-link">
+                <div id="account" class="account">
+                  <i class="fas fa-user-circle"></i>
+                  <a href="#"><?php echo @$_SESSION['logged_user']->login?></a>
+                  <div class="account-button"><i class="fas fa-angle-down"></i></div>
+                </div>
+              </li>
+              <li class="nav-link"><a href="/logout.php"><i class="fas fa-sign-out-alt"></i>Выйти</a></li>
+            <?php else : ?>
+            <li class="nav-link"><a href="/signup.php"><i class="fas fa-sign-in-alt"></i>Зарегестрироваться</a></li>
+            <li class="nav-link"><a href="/login.php"><i class="fas fa-sign-in-alt"></i>Войти</a></li>
+            <?php endif; ?>
+          </ul>
+
+        </div>
+
+      </div>
+    </header>
+
+///
+Old Posts**
+
+      <?php
+        for ($i=0; $i < 3; $i++) :
+      ?>
+
+        <div class="col _anim-items _anim-no-hide">
+          <div class="card shadow-sm">
+            <img class="bd-placeholder-img card-img-top" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" src="img/article-<?php echo (1 + ($i%3)) ?>.jpg" alt="">
+
+            <div class="card-body" aria-hidden="true">
+              <h5 class="card-title placeholder-glow"><span class="placeholder col-6 placeholder-lg"></span></h5>
+              <p class="card-text placeholder-wave"><span class="placeholder col-7"></span> <span class="placeholder col-4"></span> <span class="placeholder col-4"></span> <span class="placeholder col-6"></span> <span class="placeholder col-8"></span></p>
+              <div class="d-flex justify-content-between align-items-center">
+                <a href="#" tabindex="-1" class="btn btn-info disabled placeholder col-6"></a>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      <?php endfor; ?>
+
+      <?php
+        for ($i=0; $i < 3; $i++) :
+      ?>
+
+        <div class="col _anim-items _anim-no-hide">
+          <div class="card shadow-sm">
+            <img class="bd-placeholder-img card-img-top" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false" src="img/article-<?php echo (1 + ($i%3)) ?>.jpg" alt="">
+
+            <div class="card-body">
+              <h5 class="card-title">Title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <a href="/page-1.php"><div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Like</button>
+                </div></a>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      <?php endfor; ?>
+
+      <?php
+        for ($i=0; $i < 3; $i++) :
+      ?>
+
+      <article class="article _anim-items _anim-no-hide">
+        <a href="page-1.php" class="image">
+          <img src="img/article-<?php echo (1 + ($i%3)) ?>.jpg" alt="">
+        </a>
+        <div class="title">
+          <a href="page-1.php">Любите захватывающие книги? Кажется, у меня есть то, что вы ищите</a>
+          <div class="group">
+            <a href="#43" class="">Книги</a>
+          </div>
+        </div>
+      </article>
+      <?php endfor; ?>
